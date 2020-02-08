@@ -1,4 +1,5 @@
 import { createConnection } from 'typeorm';
+import { Photo } from './model/photo.entity';
 
 export const databaseProviders = [
   {
@@ -10,9 +11,7 @@ export const databaseProviders = [
       username: 'postgres',
       password: 'changeme',
       database: 'postgres',
-      entities: [
-        __dirname + '/../**/*.entity.js',
-      ],
+      entities: [Photo],
       synchronize: true,
     }),
   },
